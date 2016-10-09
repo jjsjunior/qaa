@@ -1,0 +1,15 @@
+<div class="container" ng-controller="CadastroPerguntaCtrl">
+  <h2>Perguntas</h2>
+  <span >
+      <button ng-click="criarPergunta()" class="btn btn-xs btn-info">Nova Pergunta</button>      
+      </button>
+  <ul class="list-list-group">
+    <li class="list-group-item" ng-repeat="pergunta in perguntas"> {{ pergunta.descricao }} 
+      <span class="pull-right">
+      <button ng-click="responder(pergunta)" class="btn btn-xs btn-info">Respostas</button>
+      <button ng-click="avaliarReposta(pergunta)"  class="btn btn-xs btn-warning">Avaliar Respostas</span>
+      </button>
+    </span>
+    </li>
+  </ul>
+</div>

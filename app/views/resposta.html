@@ -1,0 +1,17 @@
+<h2>Respostas</h2>
+<label>{{pergunta.descricao}}</label>
+<form>
+  <div class="form-group">
+    <label for="novaresposta">Nova Resposta:</label>
+    <textarea  ng-model="resposta.descricao" rows="2" class="form-control" id="novaresposta"/>
+  </div>  
+  <button ng-click="inserirResposta()" class="btn btn-default">Adicionar Resposta</button>
+<h3>Respostas anteriores</h3>
+<ul class="list-list-group">
+    <li class="list-group-item" ng-repeat="resposta in pergunta.respostas  | orderBy: '-votos'"> {{ resposta.descricao }} 
+      <span class="pull-right">
+      <span class="label label-default">({{resposta.votos}}) voto(s)</span>
+    </span>
+    </li>
+ </ul>
+ </form>

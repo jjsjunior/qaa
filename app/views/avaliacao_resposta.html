@@ -1,0 +1,12 @@
+<h2>Avaliação de Respostas</h2>
+<label>{{pergunta.descricao}}</label>
+<form>
+<ul class="list-list-group">
+    <li class="list-group-item" ng-repeat="resposta in pergunta.respostas"> {{ resposta.descricao }} 
+      <span class="pull-right">
+      <span class="label label-default">{{resposta.votos}}</span>
+      <button ng-click="incluirVoto(resposta)" class="btn btn-xs btn-success">Votar</button>      
+    </span>
+    </li>
+ </ul>
+ </form>
