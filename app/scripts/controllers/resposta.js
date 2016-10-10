@@ -2,7 +2,7 @@
 
 
 angular.module('qaaApp')
-  .controller('RespostaCtrl', function ($scope,$stateParams,RepostaService) {
+  .controller('RespostaCtrl',['$scope','$stateParams','RepostaService', function ($scope,$stateParams,RepostaService) {
     
    $scope.pergunta = $stateParams.pergunta;
    $scope.resposta = {};
@@ -12,4 +12,4 @@ angular.module('qaaApp')
       $scope.resposta = {};
     };
 
-  });
+  }]);

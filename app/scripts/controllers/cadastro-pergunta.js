@@ -2,7 +2,7 @@
 
 
 angular.module('qaaApp')
-  .controller('CadastroPerguntaCtrl', function ($scope,$state,$stateParams,$rootScope,PerguntaService) {
+  .controller('CadastroPerguntaCtrl',['$scope','$state','PerguntaService', function ($scope,$state,PerguntaService) {
     $scope.pergunta = {};
 
     $scope.salvar = function(){
@@ -10,4 +10,4 @@ angular.module('qaaApp')
       $state.go( 'perguntas');
     };
 
-  });
+  }]);

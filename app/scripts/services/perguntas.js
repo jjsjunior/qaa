@@ -2,7 +2,7 @@
 
 
 angular.module('qaaApp')
-  .service('PerguntaService', function ($rootScope) {
+  .service('PerguntaService', ['$rootScope',function ($rootScope) {
 
     this.salvarPergunta = function(pergunta) {
         if(_.isUndefined($rootScope.perguntas)){
@@ -15,4 +15,4 @@ angular.module('qaaApp')
         return $rootScope.perguntas;        
     };
 
-});
+}]);

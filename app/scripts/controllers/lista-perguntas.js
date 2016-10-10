@@ -2,7 +2,7 @@
 
 
 angular.module('qaaApp')
-  .controller('ListaPerguntasCtrl', function ($scope,$state,$stateParams,PerguntaService) {
+  .controller('ListaPerguntasCtrl',['$scope','$state','$stateParams','PerguntaService', function ($scope,$state,$stateParams,PerguntaService) {
     $scope.perguntas = PerguntaService.listarPerguntas();
 
     $scope.responder = function(pergunta){
@@ -17,4 +17,4 @@ angular.module('qaaApp')
       $state.go( 'novaPergunta');
     };
 
-  });
+  }]);
