@@ -6,9 +6,13 @@ version 0.15.1.
 ## Build & development
 
 Para build execute na raiz do projeto:
+
 bower install
+
 npm install
+
 Para executar:
+
 grunt server
 
 
