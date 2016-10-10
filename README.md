@@ -5,8 +5,16 @@ version 0.15.1.
 
 ## Build & development
 
-Run `grunt` for building and `grunt serve` for preview.
+Para build execute na raiz do projeto:
 
-## Testing
+bower install
 
-Running `grunt test` will run the unit tests with karma.
+npm install
+
+Para executar:
+
+grunt server
+
+
+
+
